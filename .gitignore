@@ -1,0 +1,19 @@
+# Ignorar entornos virtuales
+venv/
+__pycache__/
+*.pyc
+
+# Archivos de configuración específicos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración del IDE
+.vscode/
+.idea/
+
+# Archivos de entorno
+.env
+
+# Archivos generados por pip
+pip-log.txt
+pip-delete-this-directory.txt
