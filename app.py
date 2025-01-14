@@ -14,3 +14,8 @@ socketio = SocketIO(app)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@socketio.on('message')
+def handle_message(data):
+    print(f'Received message: {data}')
+    emit('message', data, broadcast=True)
