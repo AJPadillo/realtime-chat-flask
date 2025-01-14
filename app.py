@@ -19,3 +19,6 @@ def index():
 def handle_message(data):
     print(f'Received message: {data}')
     emit('message', data, broadcast=True)
+
+if __name__ == '__main__':
+    socketio.run(app, debug=True)
