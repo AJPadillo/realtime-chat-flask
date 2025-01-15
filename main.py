@@ -12,12 +12,14 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 socketio = SocketIO(app)
 
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    return render_template('home.html')
+
 if __name__ == '__main__':
     socketio.run(app, debug=True)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+
 
 @socketio.on('message')
 def handle_message(data):
