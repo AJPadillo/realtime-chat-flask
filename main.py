@@ -20,6 +20,9 @@ def home():
         join = request.form.get('join', False)
         create = request.form.get('create', False)
 
+        if not name:
+            return render_template('home.html', error='Name is required')
+
     return render_template('home.html')
 
 if __name__ == '__main__':
