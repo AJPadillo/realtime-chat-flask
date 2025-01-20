@@ -39,7 +39,7 @@ def home():
             return render_template('home.html', error='Name is required', code = code, name = name)
         
         if join != False and not code:
-            return render_template('home.html', error='Code is required')
+            return render_template('home.html', error='Code is required', code = code, name = name)
         
         room = code
         if create != False:
@@ -59,7 +59,7 @@ def room():
     room = session.get('room')
     if room is None or session.get('name') is None or room not in rooms:
         return redirect(url_for('home'))
-        
+
     return render_template('room.html')
 
 if __name__ == '__main__':
