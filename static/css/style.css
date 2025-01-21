@@ -41,3 +41,15 @@
     width: 100%;
 }
 
+.inputs {
+    padding: 10px;
+    display: flex;
+}
+
+h2 {
+    text-align: center;
+}
+
+#message {
+    flex: 1;
+}
