@@ -35,3 +35,9 @@
     align-items: stretch;
 }
 
+.messages {
+    overflow-y: scroll;
+    flex: 1;
+    width: 100%;
+}
+
